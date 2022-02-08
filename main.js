@@ -287,7 +287,7 @@ const app = {
         }), 500)
     },
     loadConfig() {
-        this.isRandom = musicPlayerSetting.get('isRandom') || false
+        this.isRandom = musicPlayerSetting.get('isRandom') || false // "|| false" -> logical, vì ban đầu localStorage rỗng (ko thể get dc, nên mặc định là false)
         this.isRepeat = musicPlayerSetting.get('isRepeat') || false
         randomBtn.classList.toggle('active', this.isRandom)
         repeatBtn.classList.toggle('active', this.isRepeat)
