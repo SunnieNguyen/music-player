@@ -287,8 +287,8 @@ const app = {
         }), 500)
     },
     loadConfig() {
-        this.isRandom = musicPlayerSetting.get('isRandom')
-        this.isRepeat = musicPlayerSetting.get('isRepeat')
+        this.isRandom = musicPlayerSetting.get('isRandom') || false
+        this.isRepeat = musicPlayerSetting.get('isRepeat') || false
         randomBtn.classList.toggle('active', this.isRandom)
         repeatBtn.classList.toggle('active', this.isRepeat)
     },
