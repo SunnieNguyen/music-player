@@ -282,7 +282,7 @@ const app = {
     scrollToActiveSong() {
         // tự search gg thằng scrollIntoView
         setTimeout($('.song.active').scrollIntoView({
-            // behavior: "smooth", 
+            behavior: "smooth", 
             block: "end", 
         }), 500)
     },
